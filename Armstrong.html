@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Title </title>
+</head>
+
+<body>
+    Enter any Number: <input id="no_input">
+    <button onclick="armstr()">Check</button>
+
+    <script>
+        function armstr() {
+            var arm = 0;
+            var num;
+            num = Number(document.getElementById("no_input").value);
+            temp = num;
+            var sum = 0;
+            while (temp > 0) {
+                a = temp % 10;
+                temp = parseInt(temp / 10); // convert float into Integer
+                sum = sum * 10 + a;
+            }
+            if (sum == num) {
+                alert("Pelindron number");
+
+            } else {
+                alert("Not Pelindron number");
+            }
+            // while (temp > 0) {
+            // a = temp % 10;
+            // temp = parseInt(temp / 10); // convert float into Integer
+            // arm = arm + a * a * a;
+
+            // }
+            // if (arm == num) {
+            // alert("Armstrong number");
+            // } else {
+            // alert("Not Armstrong number");
+            // }
+        }
+    </script>
+
+</body></html>
